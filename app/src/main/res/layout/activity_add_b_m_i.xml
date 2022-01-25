@@ -1,0 +1,349 @@
+
+
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_color"
+    tools:context="cc.ext.btrack.addBMI"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="number"
+        android:letterSpacing=".1"
+        android:text="175"
+        android:textAlignment="center"
+        android:textColor="#597E8D"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+        app:layout_constraintEnd_toEndOf="@+id/imageView18"
+        app:layout_constraintStart_toStartOf="@+id/imageView18"
+        app:layout_constraintTop_toTopOf="@+id/imageView18" />
+
+
+    <TextView
+        android:id="@+id/textViewbmicalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiko"
+        android:transitionName="textviewone"
+        android:text="BMI Calculator"
+        android:textColor="#98BFCD"
+        android:textSize="33sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <ImageView
+        android:id="@+id/male_imageview"
+        android:layout_width="145dp"
+        android:layout_height="152dp"
+        android:layout_weight="1"
+        android:tag="0"
+        android:transitionName="gendercard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewbmicalc"
+        app:layout_constraintVertical_bias="0.09"
+        app:srcCompat="@drawable/unselected_card" />
+
+    <ImageView
+        android:id="@+id/female_imageview"
+        android:layout_width="145dp"
+        android:layout_height="152dp"
+        android:layout_weight="1"
+        android:tag="1"
+        android:transitionName="gendercard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toEndOf="@+id/male_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/textViewbmicalc"
+        app:layout_constraintVertical_bias="0.091"
+        app:srcCompat="@drawable/selected_card" />
+
+    <ImageView
+        android:id="@+id/maleLogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/male_imageview"
+        app:layout_constraintStart_toStartOf="@+id/male_imageview"
+        app:layout_constraintTop_toTopOf="@+id/male_imageview"
+        app:srcCompat="@drawable/male_unselected" />
+
+    <ImageView
+        android:id="@+id/femaleLogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/female_imageview"
+        app:layout_constraintStart_toStartOf="@+id/female_imageview"
+        app:layout_constraintTop_toTopOf="@+id/female_imageview"
+        app:srcCompat="@drawable/female_selected" />
+
+    <TextView
+        android:id="@+id/maleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:letterSpacing=".2"
+        android:text="Male"
+        android:textColor="#486A7A"
+        app:layout_constraintEnd_toEndOf="@+id/male_imageview"
+        app:layout_constraintStart_toStartOf="@+id/male_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/maleLogo" />
+
+    <TextView
+        android:id="@+id/femaleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="38dp"
+        android:letterSpacing=".2"
+        android:text="Female"
+        android:textColor="#FBFBFB"
+        app:layout_constraintEnd_toEndOf="@+id/female_imageview"
+        app:layout_constraintStart_toStartOf="@+id/female_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/femaleLogo" />
+
+    <TextView
+        android:id="@+id/cmText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="cm"
+        android:textColor="#FBFBFB"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/male_imageview"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/kgText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="kg"
+        android:textColor="#FBFBFB"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cmText"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="goal"
+        android:textColor="#FBFBFB"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kgText"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="age"
+        android:textColor="#FBFBFB"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintVertical_bias="0.161" />
+
+    <TextView
+        android:id="@+id/ftText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="ft"
+        android:textColor="#486A7A"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/male_imageview"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <TextView
+        android:id="@+id/lbText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="lb"
+        android:textColor="#486A7A"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ftText"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="192dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/female_imageview"
+        app:layout_constraintVertical_bias="0.078"
+        app:srcCompat="@drawable/value_add" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+        app:layout_constraintVertical_bias="0.07"
+        app:srcCompat="@drawable/value_add" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView21"
+        app:layout_constraintVertical_bias="0.065"
+        app:srcCompat="@drawable/value_add" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goalEditText"
+        app:layout_constraintVertical_bias="0.097"
+        app:srcCompat="@drawable/value_add" />
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:background="@null"
+        android:letterSpacing=".1"
+        android:text="175"
+        android:textAlignment="center"
+        android:textColor="#597E8D"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+        app:layout_constraintEnd_toEndOf="@+id/imageView18"
+        app:layout_constraintStart_toStartOf="@+id/imageView18"
+        app:layout_constraintTop_toTopOf="@+id/imageView18" />
+
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:letterSpacing=".1"
+        android:text="80.5"
+        android:textAlignment="center"
+        android:textColor="#597E8D"
+        android:textSize="20sp"
+        android:background="@null"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView21"
+        app:layout_constraintEnd_toEndOf="@+id/imageView21"
+        app:layout_constraintStart_toStartOf="@+id/imageView21"
+        app:layout_constraintTop_toTopOf="@+id/imageView21" />
+
+    <EditText
+        android:id="@+id/goalEditText"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:background="@null"
+        android:inputType="numberDecimal"
+        android:letterSpacing=".1"
+        android:text="75"
+        android:textAlignment="center"
+        android:textColor="#597E8D"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView22"
+        app:layout_constraintEnd_toEndOf="@+id/imageView22"
+        app:layout_constraintStart_toStartOf="@+id/imageView22"
+        app:layout_constraintTop_toTopOf="@+id/imageView22" />
+
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@null"
+        android:ems="10"
+        android:inputType="number"
+        android:letterSpacing=".1"
+        android:text="25"
+        android:textAlignment="center"
+        android:textColor="#597E8D"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView23"
+        app:layout_constraintEnd_toEndOf="@+id/imageView23"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView23"
+        app:layout_constraintTop_toTopOf="@+id/imageView23"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/calcButton"
+        android:layout_width="347dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/main_color"
+        android:scaleType="centerCrop"
+        android:transitionName="buttoncalculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView23"
+        app:layout_constraintVertical_bias="0.487"
+        app:srcCompat="@drawable/calculate_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

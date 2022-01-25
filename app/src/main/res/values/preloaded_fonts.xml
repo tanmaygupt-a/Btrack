@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/amiko</item>
+        <item>@font/cabin_sketch</item>
+        <item>@font/caveat_brush</item>
+        <item>@font/delius_unicase</item>
+        <item>@font/didact_gothic</item>
+    </array>
+</resources>
